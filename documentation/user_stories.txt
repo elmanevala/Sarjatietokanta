@@ -1,0 +1,6 @@
+User Stories:
+
+- Kaveriporukan netflix-maratoonin järjestäjänä haluan katsoa, mitä sarjoja kaverini ovat katsoneet, jotta voimme helposti yhdessä päättä, mitä katsotaan tänään.
+- Tyypinä, joka etsii katsottavaa netflixistä, haluan lukea lyhyitä arvoita sarjoista, jotten tuhlaa aikaani huonoihin sarjoihin.
+- Hajamielisenä ihmisenä haluan pitää kirjaa, mitkä sarjat olen katsonut lopppuun ja mitkä olen jättänyt kesken, jotten aloita jotain sarjaa alusta.
+- Innokkaana netflixin katsojana haluan pitää kirjaa kaikista seuraamistani sarjoista jotta voin fiilistellä sarjoja myöhemmin.
