@@ -7,4 +7,7 @@ Tietokantasovellus, jossa voi pitää kirjaa katsotuista Netflix-sarjoista.
 - Lisätä uusia sarjoja tietokantaan.
 
 
-[Tietokantakaavio](https://dbdiagram.io/d/5e6a59e54495b02c3b882af7)
+[Sovellus herokussa](https://tsoha-sarjasovellus.herokuapp.com/)
+
+Tietokantakaavio:
+
