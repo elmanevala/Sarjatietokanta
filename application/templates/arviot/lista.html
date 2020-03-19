@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<table>
+  <tr>
+    <th>Sarja</th>
+    <th>Arvio</th>
+    <th>Kasottu loppuun</th>
+    <th></th>
+  </tr>
+  {% for arvio in arviot %}
+  <tr>
+    <td>{{ arvio.sarja_id }}</td>
+    <td>{{ arvio.arvio }}</td>
+    <td>{{ arvio.katsottu }}</td>
+    <td>
+      <form method="POST" action="{{ url_for('arvio_katsottu', arvio_id=arvio.id) }}">
+	<input type="submit" value="Sarja katsottu loppuun asti!"/>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

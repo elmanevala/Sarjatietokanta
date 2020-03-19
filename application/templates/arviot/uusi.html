@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<form method="POST" action="{{ url_for('arviot_luo') }}">
+  <input type="text" name="sarja_id" value="sarja"/>
+  <input type="text" name="arvio" value="arvio"/>
+  <input type="submit" value="Lisää sarjan arvio"/>
+</form>
+{% endblock %}
