@@ -16,3 +16,5 @@ Tietokantasovellus, jossa voi pitää kirjaa katsotuista Netflix-sarjoista.
 Tietokantakaavio:
 
 ![alt text](https://raw.githubusercontent.com/elmanevala/Sarjatietokanta/master/documentation/sarjatietokanta.png "Tietokantakaavio")
+
+- Tietokantaan tulee vielä yksi tietokantataulu sekä liitostaulu. Taulu on todennäköisesti sarjojen luokittelua varten, mutta en ole sen toiminnallisuuksista vielä täysin varma, joten se ei vielä ole kaaviossa.
