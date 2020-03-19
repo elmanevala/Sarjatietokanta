@@ -11,7 +11,7 @@ class Arvio(db.Model):
     arvio = db.Column(db.String(144), nullable=False)
     katsottu = db.Column(db.Boolean, nullable=False)
 
-    def __init__(self, arvio):
-        self.sarja_id = "sarjanNimi"
+    def __init__(self, arvio, sarja_id):
+        self.sarja_id = sarja_id
         self.arvio = arvio
         self.katsottu = False

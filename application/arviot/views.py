@@ -25,7 +25,7 @@ def arvio_katsottu(arvio_id):
 
 @app.route("/arviot/", methods=["POST"])
 def arviot_luo():
-    a = Arvio(request.form.get("arvio"))
+    a = Arvio(request.form.get("arvio"), request.form.get("sarja_id"))
 
     db.session().add(a)
     db.session().commit()
