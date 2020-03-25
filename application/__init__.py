@@ -12,4 +12,7 @@ from application import views
 from application.arviot import models
 from application.arviot import views
 
+from application.auth import models
+from application.auth import views
+
 db.create_all()
