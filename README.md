@@ -11,10 +11,13 @@ Tietokantasovellus, jossa voi pitää kirjaa katsotuista Netflix-sarjoista.
 
 [Sovellus herokussa](https://tsoha-sarjasovellus.herokuapp.com/)
 
-## 
+## Dokumentaatiota
 
 Tietokantakaavio:
 
-![alt text](https://raw.githubusercontent.com/elmanevala/Sarjatietokanta/master/documentation/sarjatietokanta.png "Tietokantakaavio")
+![alt text](https://raw.githubusercontent.com/elmanevala/Sarjatietokanta/master/documentation/tietokantakaavio.png "Tietokantakaavio")
 
-- Tietokantaan tulee vielä yksi tietokantataulu sekä liitostaulu. Taulu on todennäköisesti sarjojen luokittelua varten, mutta en ole sen toiminnallisuuksista vielä täysin varma, joten se ei vielä ole kaaviossa.
+- [Tietokantakaavio GitHubissa](https://github.com/elmanevala/Sarjatietokanta/blob/master/documentation/tietokantakaavio.png)
+
+- [User Stories -tiedosto](https://github.com/elmanevala/Sarjatietokanta/blob/master/documentation/user_stories.txt)
+
