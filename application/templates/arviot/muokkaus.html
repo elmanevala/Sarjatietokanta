@@ -23,5 +23,20 @@
         <input type="submit" value="Lisää sarjan uusi arvio"/>
       </td>
     </tr>
+    <tr>
+        <th>Sarja</th>
+        <th>Arvio</th>
+        <th>Sarja katsottu loppuun</th>
+        <th>Arvio luotu</th>
+        <th>Arviota muokattu</th>
+        <th></th>
+      </tr>
+    <tr>
+         <td>{{ arvio.sarja_id }}</td>
+        <td>{{ arvio.arvio }}</td>
+        <td>{{ arvio.katsottu }}</td>
+        <td>{{ arvio.pvm_luotu }}</td>
+        <td>{{ arvio.pvm_muokattu }}</td>
+    </tr>
 </form>
 {% endblock %}

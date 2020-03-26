@@ -15,10 +15,10 @@ def arviot_lista():
 def arviot_kaavio():
     return render_template("arviot/uusi.html", form = ArvioKaavake())
 
-@app.route("/arviot/muokkaus/")
+@app.route("/arviot/muokkaus/<arvio_id>/", methods=["POST"])
 @login_required
-def arviot_muokkausnakyma():
-    return render_template("arviot/muokkaus.html", form = MuokkausKaavake())
+def arviot_muokkausnakyma(arvio_id):
+    return render_template("arviot/muokkaus.html", arvio = Arvio.query.get(arvio_id), form = MuokkausKaavake())
 
 
 @app.route("/arviot/<arvio_id>/poisto", methods=["POST"]) 
@@ -63,11 +63,11 @@ def arviot_luo():
 
 
 
-@app.route("/arviot/muokkaus", methods=["GET", "POST"])
+@app.route("/arviot/muokkaus", methods=["POST"])
 @login_required
 def arviot_muokkaus():
 
-    return redirect(url_for("arviot_muokkausnakyma"))
+    return redirect(url_for("arviot_lista"))
 
 
 
