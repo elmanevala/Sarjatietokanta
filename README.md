@@ -8,7 +8,7 @@ Tietokantasovellus, jossa voi pitää kirjaa katsotuista Netflix-sarjoista.
 
 ## Tunnusten luominen/testitunnukset
 Testitunnukset:
-- kayttajanimi: kayttajanimi
+- käyttäjänimi: kayttajanimi
 - salasana: salasana
 
 
@@ -20,7 +20,7 @@ Tunnusten luominen:
 
 ## Huomioitavaa
 - Arvion muokkaustoiminto ei ole vielä valmis, joten muokkaus-painike siirtää käyttäjän takaisin listaukseen.
-	- HUOM kyseinen painike sijaitsee muokkaus/lisätietosivulla eli listausksen muokkaus-painikkeesta pääsee vielä pykälän eteenpäin.
+	- HUOM kyseinen painike sijaitsee muokkaus/lisätietosivulla eli listauksen muokkaus-painikkeesta pääsee vielä pykälän eteenpäin.
 
 ##
 
