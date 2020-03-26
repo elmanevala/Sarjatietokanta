@@ -6,8 +6,21 @@ Tietokantasovellus, jossa voi pitää kirjaa katsotuista Netflix-sarjoista.
 - Katsoa, mitä sarjoja muut käyttäjät ovat katsoneet ja lukea heidän arvioitaan.
 - Lisätä uusia sarjoja tietokantaan.
 
+## Tunnusten luominen/testitunnukset
+Testitunnukset:
+	- kayttajanimi: kayttajanimi
+	- salasana: salasana
 
-## 
+
+Tunnusten luominen:
+- Siirry linkin avulla rekisteröitymissivulle.
+- Valitse nimi, käyttäjänimi sekä salasana.
+	- Nimen ja käyttäjänimen tulee olla vähintään kolme merkkiä.
+	- Salasana-ruutujen sisällöt ovat samat (salasana voi vielä olla selkokielinen, parannus työnalla).
+
+## Huomioitavaa
+- Arvion muokkaustoiminto ei ole vielä valmis, joten muokkaus-painike siirtää käyttäjän takaisin listaukseen.
+	- HUOM kyseinen painike sijaitsee muokkaus/lisätietosivulla eli listausksen muokkaus-painikkeesta pääsee vielä pykälän eteenpäin.
 
 [Sovellus herokussa](https://tsoha-sarjasovellus.herokuapp.com/)
 
