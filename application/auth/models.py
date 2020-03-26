@@ -13,6 +13,8 @@ class Kayttaja(db.Model):
     kayttajanimi = db.Column(db.String(144), nullable=False)
     salasana = db.Column(db.String(144), nullable=False)
 
+    arviot = db.relationship("Arvio", backref='kayttaja', lazy=True)
+
     def __init__(self, nimi, kayttajanimi, salasana):
         self.nimi = nimi
         self.kayttajanimi = kayttajanimi

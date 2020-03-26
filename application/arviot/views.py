@@ -1,19 +1,23 @@
 from flask import render_template, request, redirect, url_for
+from flask_login import login_required, current_user
 
 from application import app, db
 from application.arviot.models import Arvio
 from application.arviot.forms import ArvioKaavake
 
 @app.route("/arviot/", methods=["GET"])
+@login_required
 def arviot_lista():
-    return render_template("arviot/lista.html", arviot = Arvio.query.all())
+    return render_template("arviot/lista.html", arviot = Arvio.query.filter(Arvio.kayttaja_id == current_user.id))
 
 @app.route("/arviot/uusi/")
+@login_required
 def arviot_kaavio():
     return render_template("arviot/uusi.html", form = ArvioKaavake())
 
 
-@app.route("/arviot/<arvio_id>/", methods=["POST"])     
+@app.route("/arviot/<arvio_id>/", methods=["POST"]) 
+@login_required
 def arvio_katsottu(arvio_id):
 
     a = Arvio.query.get(arvio_id)
@@ -25,6 +29,7 @@ def arvio_katsottu(arvio_id):
 
 
 @app.route("/arviot/", methods=["POST"])
+@login_required
 def arviot_luo():
 
     form = ArvioKaavake(request.form)
@@ -34,6 +39,7 @@ def arviot_luo():
 
     a = Arvio(form.arvio.data, form.sarja_id.data)
     a.katsottu = form.katsottu.data
+    a.kayttaja_id = current_user.id
 
     db.session().add(a)
     db.session().commit()
