@@ -21,15 +21,12 @@
       </td>
     </tr>
     <tr>
-      <td>
+  
+    <td>
       <ul>
         {% for error in form.arvio.errors %}
         <li>{{ error }}</li>
         {% endfor %}
-      </ul>
-    </td>
-    <td>
-      <ul>
         {% for error in form.sarja_id.errors %}
         <li>{{ error }}</li>
         {% endfor %}
