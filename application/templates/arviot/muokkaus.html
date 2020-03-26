@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<form method="POST" action="{{ url_for('arviot_muokkaus') }}">
+  <table>
+    <tr>
+      <td>
+        {{ form.arvio.label }}
+      </td>
+      <td>
+        {{ form.arvio }}
+      </td>
+      <td>
+        {{ form.katsottu.label }}
+      </td>
+      <td>
+        {{ form.katsottu }}
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Lisää sarjan uusi arvio"/>
+      </td>
+    </tr>
+</form>
+{% endblock %}

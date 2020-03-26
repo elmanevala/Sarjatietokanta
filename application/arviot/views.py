@@ -3,7 +3,7 @@ from flask_login import login_required, current_user
 
 from application import app, db
 from application.arviot.models import Arvio
-from application.arviot.forms import ArvioKaavake
+from application.arviot.forms import ArvioKaavake, MuokkausKaavake
 
 @app.route("/arviot/", methods=["GET"])
 @login_required
@@ -14,6 +14,11 @@ def arviot_lista():
 @login_required
 def arviot_kaavio():
     return render_template("arviot/uusi.html", form = ArvioKaavake())
+
+@app.route("/arviot/muokkaus/")
+@login_required
+def arviot_muokkausnakyma():
+    return render_template("arviot/muokkaus.html", form = MuokkausKaavake())
 
 
 @app.route("/arviot/<arvio_id>/poisto", methods=["POST"]) 
@@ -55,3 +60,14 @@ def arviot_luo():
     db.session().commit()
     
     return redirect(url_for("arviot_lista"))
+
+
+
+@app.route("/arviot/muokkaus", methods=["GET", "POST"])
+@login_required
+def arviot_muokkaus():
+
+    return redirect(url_for("arviot_muokkausnakyma"))
+
+
+

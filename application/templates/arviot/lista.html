@@ -23,6 +23,11 @@
         <input type="submit" value="Poista arvio"/>
        </form>
     </td>
+  <td>
+    <form method="POST" action="{{ url_for('arviot_muokkausnakyma', arvio_id=arvio.id) }}">
+      <input type="submit" value="Muokkaa arviota"/>
+     </form>
+  </td>
     </td>
   </tr>
   {% endfor %}

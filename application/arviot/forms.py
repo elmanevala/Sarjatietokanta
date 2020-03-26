@@ -10,3 +10,10 @@ class ArvioKaavake(FlaskForm):
     class Meta:
         csrf = False
 
+class MuokkausKaavake(FlaskForm):
+
+    arvio = StringField("Arvio: ", [validators.Length(min=2, message='Arvion oltava ainakin kaksi merkkiä.')], render_kw={"placeholder": "kirjoita uusi arvio"})
+    katsottu = BooleanField("Muuta katsottu-statusta")
+
+    class Meta:
+        csrf = False
