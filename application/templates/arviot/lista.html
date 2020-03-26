@@ -15,8 +15,14 @@
     <td>{{ arvio.katsottu }}</td>
     <td>
       <form method="POST" action="{{ url_for('arvio_katsottu', arvio_id=arvio.id) }}">
-	<input type="submit" value="Sarja katsottu loppuun asti!"/>
+	      <input type="submit" value="Sarja katsottu loppuun asti!"/>
       </form>
+    </td>
+    <td>
+      <form method="POST" action="{{ url_for('arvio_poisto', arvio_id=arvio.id) }}">
+        <input type="submit" value="Poista arvio"/>
+       </form>
+    </td>
     </td>
   </tr>
   {% endfor %}

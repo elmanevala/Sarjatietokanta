@@ -16,7 +16,7 @@ def arviot_kaavio():
     return render_template("arviot/uusi.html", form = ArvioKaavake())
 
 
-@app.route("/arviot/<arvio_id>/", methods=["POST"]) 
+@app.route("/arviot/<arvio_id>/poisto", methods=["POST"]) 
 @login_required
 def arvio_katsottu(arvio_id):
 
@@ -24,6 +24,16 @@ def arvio_katsottu(arvio_id):
     a.katsottu = True
     db.session().commit()
     
+    return redirect(url_for("arviot_lista"))
+
+
+@app.route("/arviot/<arvio_id>/", methods=["POST"]) 
+@login_required
+def arvio_poisto(arvio_id):
+
+    Arvio.query.filter(Arvio.id == arvio_id).delete()
+    db.session().commit()   
+
     return redirect(url_for("arviot_lista"))
 
 

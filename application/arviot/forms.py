@@ -9,3 +9,4 @@ class ArvioKaavake(FlaskForm):
 
     class Meta:
         csrf = False
+
